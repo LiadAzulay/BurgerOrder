@@ -70,10 +70,10 @@ export const auth = (email, password, isSignup) => {
   }
   return dispatch => {
     dispatch(authStart());
-    let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyAdBEgh7bK8Ay2HHtnGubmmkh4fc6MQu5Y';
+    let url = 'GoogleApiKey';
 
     if (!isSignup) {
-      url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyAdBEgh7bK8Ay2HHtnGubmmkh4fc6MQu5Y';
+      url = 'GoogleApiKey';
     }
     axios.post(url, authData)
       .then(response => {
